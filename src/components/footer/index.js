@@ -9,7 +9,7 @@ import {
   Break,
 } from "./styles/footer";
 
-export default function Footer({ childer, ...restProps }) {
+const Footer = ({ children, ...restProps }) => {
   return <Container {...restProps}>{children}</Container>;
 }
 
@@ -36,3 +36,4 @@ Footer.Text = function FooterText({ children, ...restProps }) {
 Footer.Break = function FooterBreak({ children, ...restProps }) {
   return <Break {...restProps}>{children}</Break>;
 };
+export default Footer;
