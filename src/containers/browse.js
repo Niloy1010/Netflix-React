@@ -6,6 +6,7 @@ import * as ROUTES from "../constants/routes";
 import logo from "../logo.svg";
 import { FooterContainer } from "./footer";
 import Player from "../components/player";
+import Fuse from "fuse.js";
 
 export const BrowseContainer = ({ slides }) => {
   const [category, setCategory] = useState("series");
@@ -28,6 +29,19 @@ export const BrowseContainer = ({ slides }) => {
     setSlideRows(slides[category]);
   }, [slides, category]);
   console.log(user);
+
+  useEffect(() => {
+    const fuse = new Fuse(slideRows, {
+      keys: ["data.description", "data.title", "data.genre"],
+    });
+    const results = fuse.search(searchTerm).map(({ item }) => item);
+
+    if (slideRows.length > 0 && searchTerm.length > 3 && results.length > 0) {
+      setSlideRows(results);
+    } else {
+      setSlideRows(slides[category]);
+    }
+  }, [searchTerm]);
 
   return profile.displayName ? (
     <>

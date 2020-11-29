@@ -1,0 +1,8 @@
+.guestLogin {
+  color: red;
+  font-weight: 600;
+}
+.guestLogin:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}

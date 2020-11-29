@@ -14,12 +14,6 @@ export const FaqsContainer = () => {
         </Accordion.Item>
       ))}
       <Accordion.Item />
-      <OptForm>
-        <OptForm.Input placeholder="Email address" />
-        <OptForm.Button>Try it out</OptForm.Button>
-        <OptForm.Break />
-        <OptForm.Text>Try it out? Enter or create email address</OptForm.Text>
-      </OptForm>
     </Accordion>
   );
 };
