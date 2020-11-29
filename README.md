@@ -1,6 +1,5 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Full Netflix Application with functionalities. Made with React Styled Components and firebase firestore.
+Live Link: https://netflix-react-e3f82.web.app/browse
 
 ## Available Scripts
 
